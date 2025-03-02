@@ -3,7 +3,7 @@
     "configurations": [
         {
             "name": "Linux",
-            "compilerPath": "",
+            "compilerPath": "/usr/bin/gcc",
             "compilerArgs": [],
             "intelliSenseMode": "linux-gcc-x64",
             "includePath": [
