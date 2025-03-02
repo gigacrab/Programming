@@ -1,0 +1,8 @@
+import math
+
+def main():
+    a = float(input("Enter the length of side A: "))
+    b = float(input("Enter the length of side B: "))
+    print(f"The length of the hypotenuse is {format(math.hypot(a, b), '.2f')}")
+
+main()

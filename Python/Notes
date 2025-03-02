@@ -1,0 +1,22 @@
+'''
+boolean expression
+- expression that is either True of False
+- e.g. 5 == 5
+
+relational operators(== != > >= < <=)
+- for strings: use Unicode value of the first character
+
+logical operators(and or not)
+
+membership operators(in)
+
+ord(<string>)
+- returns the Unicode value
+
+chr(<int>)
+- returns the character
+
+Chapter 5
+Program-file: source-file/source-program/module(file that has .py extension)
+Modular design is a way how we can make several modules interact with each others
+''' 
