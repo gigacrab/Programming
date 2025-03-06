@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <IRremote.h>
 
 const int RECV_PIN = 7;
