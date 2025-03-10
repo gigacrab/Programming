@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int convert(int** out, int* multi, int n);
+void convert(int** out, int* multi, int n);
 
 int main(){
     int n = 0;
@@ -19,7 +19,7 @@ int main(){
     return 0;
 }
 
-int convert(int** out, int* multi, int n){
+void convert(int** out, int* multi, int n){
     int temp = n;
     while(temp > 0){
         temp = (int)(temp/2);
