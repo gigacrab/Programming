@@ -28,10 +28,11 @@ def pascals_up(index):
 
 count = int(input("Enter count amount: "))
 start_time_up = time.time()
-pascals_up(count)
-#print("Upwards time: ", time.time() - start_time_up)
 
-start_time_down = time.time()
 for i in pascals_down(count):
     print(i)
-#print("Downwards time: ", time.time() - start_time_down)
+print("Upwards time: ", time.time() - start_time_up)
+
+start_time_down = time.time()
+pascals_up(count)
+print("Downwards time: ", time.time() - start_time_down)

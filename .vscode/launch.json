@@ -5,13 +5,13 @@
             "name": "Run C++ with SFML",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",  // Path to the compiled executable
+            "program": "${fileDirname}/${fileBasenameNoExtension}", // Path to the compiled executable
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "preLaunchTask": "Build cpp with g++ and SFML",  // Build task before launching
-            "externalConsole": false  // Run the program in the integrated terminal
+            "preLaunchTask": "Build cpp with g++ and SFML", // Build task before launching
+            "externalConsole": false // Run the program in the integrated terminal
         }
     ]
 }
