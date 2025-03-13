@@ -8,7 +8,10 @@
             "intelliSenseMode": "linux-gcc-x64",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/local/include/SFML"
+                "/usr/local/include/SFML",
+                "/home/littlecrabby/vcpkg/installed/x64-linux/include/",
+                "/home/littlecrabby/anaconda3/include/python3.11/",
+                "/home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include/"
             ],
             "forcedInclude": [],
             "cStandard": "c17",

@@ -48,14 +48,18 @@
         },
         {
             "type": "cppbuild",
-            "label": "C/C++: g++ build active file",
+            "label": "(Doesn't work :c) Build C++ with matplotlibcpp",
             "command": "/usr/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I/home/littlecrabby/vcpkg/installed/x64-linux/include/",
+                "-I/home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include/",
+                "-I/home/littlecrabby/anaconda3/include/python3.11/",
+                "-I/home/littlecrabby/anaconda3/lib/"
             ],
             "options": {
                 "cwd": "${fileDirname}"

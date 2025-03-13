@@ -1,0 +1,3 @@
+/home/littlecrabby/Programming/C++/fourier-project/build/CMakeFiles/main.dir
+/home/littlecrabby/Programming/C++/fourier-project/build/CMakeFiles/edit_cache.dir
+/home/littlecrabby/Programming/C++/fourier-project/build/CMakeFiles/rebuild_cache.dir
