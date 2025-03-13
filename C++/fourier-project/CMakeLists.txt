@@ -21,7 +21,8 @@ include_directories(${Python3_INCLUDE_DIRS} ${Python3_NumPy_INCLUDE_DIRS})
 find_package(SFML 3 REQUIRED COMPONENTS Graphics)
 
 # Find matplotlibcpp
-find_path(MATPLOTLIB_CPP_INCLUDE_DIRS matplotlibcpp.h HINTS "/home/littlecrabby/vcpkg/installed/x64-linux/include")
+#find_path(MATPLOTLIB_CPP_INCLUDE_DIRS matplotlibcpp.h HINTS "/home/littlecrabby/vcpkg/installed/x64-linux/include")
+find_path(MATPLOTLIB_CPP_INCLUDE_DIRS "matplotlibcpp.h")
 
 add_executable(main src/main.cpp)
 
