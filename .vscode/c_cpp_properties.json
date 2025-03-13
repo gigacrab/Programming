@@ -8,7 +8,7 @@
             "intelliSenseMode": "linux-gcc-x64",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/include/SFML"
+                "/usr/local/include/SFML"
             ],
             "forcedInclude": [],
             "cStandard": "c17",
