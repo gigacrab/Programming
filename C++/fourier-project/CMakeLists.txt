@@ -7,6 +7,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 if(NOT DEFINED ENV{CONDA_PREFIX})
     message(FATAL_ERROR "Conda environment not detected. Please activate it before building.")
 endif()
+add_compile_options(-Wno-deprecated-declarations)
+message(WARNING "Ignored deprecated declarations enabled in CMakeList.txt.")
 
 # Manually set Python paths to Conda
 set(Python3_EXECUTABLE "$ENV{CONDA_PREFIX}/bin/python3")
@@ -29,5 +31,4 @@ add_executable(main src/main.cpp)
 target_include_directories(main PRIVATE ${MATPLOTLIB_CPP_INCLUDE_DIRS})
 target_link_libraries(main PRIVATE Python3::Python SFML::Graphics)
 target_compile_features(main PRIVATE cxx_std_17)
-add_compile_options(-Wno-deprecated-declarations)
-message(WARNING "Ignored deprecated declarations enabled in CMakeList.txt.")
+

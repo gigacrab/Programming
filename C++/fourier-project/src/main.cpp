@@ -61,7 +61,6 @@ int main() {
     for(int i = 0; i <= yScaleCount; i++){
         yTicks[i] = lim.ymin + i * yStep;
         yLabels[i] = std::to_string((int)yTicks[i]);
-        std::cout << yLabels[i];
     }
 
     std::string req;
