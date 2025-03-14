@@ -334,16 +334,16 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/littlecrabby/anaconda3/bin/python3][/home/littlecrabby/anaconda3/include/python3.11][/home/littlecrabby/anaconda3/lib/libpython3.11.so][/home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include][cfound components: Interpreter Development NumPy Development.Module Development.Embed ][v3.11.7()]
-_Python3_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=bc3dd8d2a632be950f6ed1e18a42d055
-_Python3_DEVELOPMENT_MODULE_SIGNATURE:INTERNAL=6f3d919d30d269944bccc5c41bfd6c48
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/littlecrabby/anaconda3/bin/python3][/home/littlecrabby/anaconda3/include/python3.12][/home/littlecrabby/anaconda3/lib/libpython3.12.so][/home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include][cfound components: Interpreter Development NumPy Development.Module Development.Embed ][v3.12.4()]
+_Python3_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=03a7c1f5b28f5d4c79f0f0d1b2a90775
+_Python3_DEVELOPMENT_MODULE_SIGNATURE:INTERNAL=691d2288dea4729b795d933ca6e06fbc
 _Python3_EXECUTABLE:INTERNAL=/home/littlecrabby/anaconda3/bin/python3
-_Python3_INCLUDE_DIR:INTERNAL=/home/littlecrabby/anaconda3/include/python3.11
+_Python3_INCLUDE_DIR:INTERNAL=/home/littlecrabby/anaconda3/include/python3.12
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;11;7;64;;cpython-311-x86_64-linux-gnu;/home/littlecrabby/anaconda3/lib/python3.11;/home/littlecrabby/anaconda3/lib/python3.11;/home/littlecrabby/anaconda3/lib/python3.11/site-packages;/home/littlecrabby/anaconda3/lib/python3.11/site-packages
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;12;4;64;;cpython-312-x86_64-linux-gnu;/home/littlecrabby/anaconda3/lib/python3.12;/home/littlecrabby/anaconda3/lib/python3.12;/home/littlecrabby/anaconda3/lib/python3.12/site-packages;/home/littlecrabby/anaconda3/lib/python3.12/site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=def87617e5ae386569f4430e31474471
-_Python3_LIBRARY_RELEASE:INTERNAL=/home/littlecrabby/anaconda3/lib/libpython3.11.so
-_Python3_NUMPY_SIGNATURE:INTERNAL=94b3e8bd822e82b6e3e0122acd334430
+_Python3_LIBRARY_RELEASE:INTERNAL=/home/littlecrabby/anaconda3/lib/libpython3.12.so
+_Python3_NUMPY_SIGNATURE:INTERNAL=4566ca9b5f3fa97dd3814b13c83cb875
 //Path to a file.
-_Python3_NumPy_INCLUDE_DIR:INTERNAL=/home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include
+_Python3_NumPy_INCLUDE_DIR:INTERNAL=/home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include
 

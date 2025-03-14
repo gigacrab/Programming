@@ -10,8 +10,8 @@
                 "${workspaceFolder}/**",
                 "/usr/local/include/SFML",
                 "/home/littlecrabby/vcpkg/installed/x64-linux/include/",
-                "/home/littlecrabby/anaconda3/include/python3.11/",
-                "/home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include/"
+                "/home/littlecrabby/anaconda3/include/python3.12/",
+                "/home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include"
             ],
             "forcedInclude": [],
             "cStandard": "c17",

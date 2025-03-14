@@ -48,7 +48,8 @@
         "ostream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "complex": "cpp"
     },
     "C_Cpp.default.compilerPath": "/usr/bin/g++",
     "cmake.sourceDirectory": "/home/littlecrabby/Programming/C++"

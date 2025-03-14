@@ -1,4 +1,4 @@
-#include "/home/littlecrabby/vcpkg/installed/x64-linux/include/matplotlibcpp.h"
+#include "matplotlibcpp.h"
 #include <vector>
 #include <iostream>
 #include <cmath>
@@ -13,7 +13,7 @@ typedef struct {
     double amplitude = 0;
     double frequency = 0;
     double phase = 0;
-}Signal;
+}Signal;    
 
 typedef struct {
     double xmax;
@@ -29,7 +29,7 @@ std::vector<double> toStdVector(const Eigen::VectorXd& x){
 void trig(std::string req, Signal signal, Limit lim, Eigen::VectorXd& x, Eigen::VectorXd& y){
     x = Eigen::VectorXd::LinSpaced(5000, lim.xmin, lim.xmax); //size, low, high, :: is scope resolution operator
     switch((char)toupper(req[0])){
-        case 'S':
+        case 'S':   
             y = signal.amplitude*((x.array()*signal.frequency+signal.phase).sin());
             break;
         case 'C':

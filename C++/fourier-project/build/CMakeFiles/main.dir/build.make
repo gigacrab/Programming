@@ -92,7 +92,7 @@ main_EXTERNAL_OBJECTS =
 
 bin/main: CMakeFiles/main.dir/src/main.cpp.o
 bin/main: CMakeFiles/main.dir/build.make
-bin/main: /home/littlecrabby/anaconda3/lib/libpython3.11.so
+bin/main: /home/littlecrabby/anaconda3/lib/libpython3.12.so
 bin/main: /usr/local/lib/libsfml-graphics-d.so.3.0.0
 bin/main: /usr/local/lib/libsfml-window-d.so.3.0.0
 bin/main: /usr/local/lib/libsfml-system-d.so.3.0.0

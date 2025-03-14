@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include -I/home/littlecrabby/vcpkg/installed/x64-linux/include -isystem /home/littlecrabby/anaconda3/include/python3.11
+CXX_INCLUDES = -I/home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include -I/home/littlecrabby/vcpkg/installed/x64-linux/include -isystem /home/littlecrabby/anaconda3/include/python3.12
 
 CXX_FLAGS = -Wno-deprecated-declarations
 

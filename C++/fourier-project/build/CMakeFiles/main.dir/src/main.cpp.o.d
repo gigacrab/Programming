@@ -2,10 +2,10 @@ CMakeFiles/main.dir/src/main.cpp.o: \
  /home/littlecrabby/Programming/C++/fourier-project/src/main.cpp \
  /usr/include/stdc-predef.h \
  /home/littlecrabby/vcpkg/installed/x64-linux/include/matplotlibcpp.h \
- /home/littlecrabby/anaconda3/include/python3.11/Python.h \
- /home/littlecrabby/anaconda3/include/python3.11/patchlevel.h \
- /home/littlecrabby/anaconda3/include/python3.11/pyconfig.h \
- /home/littlecrabby/anaconda3/include/python3.11/pymacconfig.h \
+ /home/littlecrabby/anaconda3/include/python3.12/Python.h \
+ /home/littlecrabby/anaconda3/include/python3.12/patchlevel.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pyconfig.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pymacconfig.h \
  /usr/include/c++/11/stdlib.h /usr/include/c++/11/cstdlib \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -77,7 +77,7 @@ CMakeFiles/main.dir/src/main.cpp.o: \
  /usr/include/wchar.h /usr/include/x86_64-linux-gnu/bits/wchar.h \
  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
- /home/littlecrabby/anaconda3/include/python3.11/pyport.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pyport.h \
  /usr/include/inttypes.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
@@ -147,115 +147,117 @@ CMakeFiles/main.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
- /home/littlecrabby/anaconda3/include/python3.11/exports.h \
- /home/littlecrabby/anaconda3/include/python3.11/pymacro.h \
- /home/littlecrabby/anaconda3/include/python3.11/pymath.h \
- /home/littlecrabby/anaconda3/include/python3.11/pymem.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/pymem.h \
- /home/littlecrabby/anaconda3/include/python3.11/pytypedefs.h \
- /home/littlecrabby/anaconda3/include/python3.11/pybuffer.h \
- /home/littlecrabby/anaconda3/include/python3.11/object.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/object.h \
- /home/littlecrabby/anaconda3/include/python3.11/objimpl.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/objimpl.h \
- /home/littlecrabby/anaconda3/include/python3.11/typeslots.h \
- /home/littlecrabby/anaconda3/include/python3.11/pyhash.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/pydebug.h \
- /home/littlecrabby/anaconda3/include/python3.11/bytearrayobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/bytearrayobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/bytesobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/bytesobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/unicodeobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/exports.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pymacro.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pymath.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pymem.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/pymem.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pytypedefs.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pybuffer.h \
+ /home/littlecrabby/anaconda3/include/python3.12/object.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pystats.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/object.h \
+ /home/littlecrabby/anaconda3/include/python3.12/objimpl.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/objimpl.h \
+ /home/littlecrabby/anaconda3/include/python3.12/typeslots.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pyhash.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/pydebug.h \
+ /home/littlecrabby/anaconda3/include/python3.12/bytearrayobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/bytearrayobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/bytesobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/bytesobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/unicodeobject.h \
  /usr/include/ctype.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/unicodeobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/longobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/longobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/longintrepr.h \
- /home/littlecrabby/anaconda3/include/python3.11/boolobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/floatobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/floatobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/complexobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/complexobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/rangeobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/memoryobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/tupleobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/tupleobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/listobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/listobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/dictobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/dictobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/odictobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/enumobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/setobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/setobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/methodobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/methodobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/moduleobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/funcobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/classobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/fileobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/fileobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/pycapsule.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/code.h \
- /home/littlecrabby/anaconda3/include/python3.11/pyframe.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/pyframe.h \
- /home/littlecrabby/anaconda3/include/python3.11/traceback.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/traceback.h \
- /home/littlecrabby/anaconda3/include/python3.11/sliceobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/cellobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/iterobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/initconfig.h \
- /home/littlecrabby/anaconda3/include/python3.11/pystate.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/pystate.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/genobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/descrobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/descrobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/genericaliasobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/warnings.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/warnings.h \
- /home/littlecrabby/anaconda3/include/python3.11/weakrefobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/weakrefobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/structseq.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/picklebufobject.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/pytime.h \
- /home/littlecrabby/anaconda3/include/python3.11/codecs.h \
- /home/littlecrabby/anaconda3/include/python3.11/pyerrors.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/pyerrors.h \
- /home/littlecrabby/anaconda3/include/python3.11/pythread.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/pythread.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/unicodeobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/initconfig.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pystate.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/pystate.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pyerrors.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/pyerrors.h \
+ /home/littlecrabby/anaconda3/include/python3.12/longobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/longobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/longintrepr.h \
+ /home/littlecrabby/anaconda3/include/python3.12/boolobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/floatobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/floatobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/complexobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/complexobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/rangeobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/memoryobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/memoryobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/tupleobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/tupleobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/listobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/listobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/dictobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/dictobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/odictobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/enumobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/setobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/setobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/methodobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/methodobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/moduleobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/funcobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/classobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/fileobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/fileobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pycapsule.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/code.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pyframe.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/pyframe.h \
+ /home/littlecrabby/anaconda3/include/python3.12/traceback.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/traceback.h \
+ /home/littlecrabby/anaconda3/include/python3.12/sliceobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/cellobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/iterobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/genobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/descrobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/descrobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/genericaliasobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/warnings.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/warnings.h \
+ /home/littlecrabby/anaconda3/include/python3.12/weakrefobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/weakrefobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/structseq.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/picklebufobject.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/pytime.h \
+ /home/littlecrabby/anaconda3/include/python3.12/codecs.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pythread.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/pythread.h \
  /usr/include/pthread.h /usr/include/sched.h \
  /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
  /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
  /usr/include/x86_64-linux-gnu/bits/setjmp.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/context.h \
- /home/littlecrabby/anaconda3/include/python3.11/modsupport.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/modsupport.h \
- /home/littlecrabby/anaconda3/include/python3.11/compile.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/compile.h \
- /home/littlecrabby/anaconda3/include/python3.11/pythonrun.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/pythonrun.h \
- /home/littlecrabby/anaconda3/include/python3.11/pylifecycle.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/pylifecycle.h \
- /home/littlecrabby/anaconda3/include/python3.11/ceval.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/ceval.h \
- /home/littlecrabby/anaconda3/include/python3.11/sysmodule.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/sysmodule.h \
- /home/littlecrabby/anaconda3/include/python3.11/osmodule.h \
- /home/littlecrabby/anaconda3/include/python3.11/intrcheck.h \
- /home/littlecrabby/anaconda3/include/python3.11/import.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/import.h \
- /home/littlecrabby/anaconda3/include/python3.11/abstract.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/abstract.h \
- /home/littlecrabby/anaconda3/include/python3.11/bltinmodule.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/pyctype.h \
- /home/littlecrabby/anaconda3/include/python3.11/pystrtod.h \
- /home/littlecrabby/anaconda3/include/python3.11/pystrcmp.h \
- /home/littlecrabby/anaconda3/include/python3.11/fileutils.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/fileutils.h \
- /home/littlecrabby/anaconda3/include/python3.11/cpython/pyfpe.h \
- /home/littlecrabby/anaconda3/include/python3.11/tracemalloc.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/context.h \
+ /home/littlecrabby/anaconda3/include/python3.12/modsupport.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/modsupport.h \
+ /home/littlecrabby/anaconda3/include/python3.12/compile.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/compile.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pythonrun.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/pythonrun.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pylifecycle.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/pylifecycle.h \
+ /home/littlecrabby/anaconda3/include/python3.12/ceval.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/ceval.h \
+ /home/littlecrabby/anaconda3/include/python3.12/sysmodule.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/sysmodule.h \
+ /home/littlecrabby/anaconda3/include/python3.12/osmodule.h \
+ /home/littlecrabby/anaconda3/include/python3.12/intrcheck.h \
+ /home/littlecrabby/anaconda3/include/python3.12/import.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/import.h \
+ /home/littlecrabby/anaconda3/include/python3.12/abstract.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/abstract.h \
+ /home/littlecrabby/anaconda3/include/python3.12/bltinmodule.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/pyctype.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pystrtod.h \
+ /home/littlecrabby/anaconda3/include/python3.12/pystrcmp.h \
+ /home/littlecrabby/anaconda3/include/python3.12/fileutils.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/fileutils.h \
+ /home/littlecrabby/anaconda3/include/python3.12/cpython/pyfpe.h \
+ /home/littlecrabby/anaconda3/include/python3.12/tracemalloc.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/allocator.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
  /usr/include/c++/11/ext/new_allocator.h /usr/include/c++/11/new \
@@ -337,18 +339,18 @@ CMakeFiles/main.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include/numpy/arrayobject.h \
- /home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include/numpy/ndarrayobject.h \
- /home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include/numpy/ndarraytypes.h \
- /home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include/numpy/npy_common.h \
- /home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include/numpy/numpyconfig.h \
- /home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include/numpy/_numpyconfig.h \
- /home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include/numpy/npy_endian.h \
- /home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include/numpy/npy_cpu.h \
- /home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include/numpy/utils.h \
- /home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include/numpy/_neighborhood_iterator_imp.h \
- /home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include/numpy/__multiarray_api.h \
- /home/littlecrabby/anaconda3/lib/python3.11/site-packages/numpy/core/include/numpy/npy_interrupt.h \
+ /home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include/numpy/arrayobject.h \
+ /home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include/numpy/ndarrayobject.h \
+ /home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include/numpy/ndarraytypes.h \
+ /home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include/numpy/npy_common.h \
+ /home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include/numpy/numpyconfig.h \
+ /home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include/numpy/_numpyconfig.h \
+ /home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include/numpy/npy_endian.h \
+ /home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include/numpy/npy_cpu.h \
+ /home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include/numpy/utils.h \
+ /home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include/numpy/_neighborhood_iterator_imp.h \
+ /home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include/numpy/__multiarray_api.h \
+ /home/littlecrabby/anaconda3/lib/python3.12/site-packages/numpy/core/include/numpy/npy_interrupt.h \
  /usr/include/setjmp.h /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \

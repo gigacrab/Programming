@@ -12,8 +12,8 @@ message(WARNING "Ignored deprecated declarations enabled in CMakeList.txt.")
 
 # Manually set Python paths to Conda
 set(Python3_EXECUTABLE "$ENV{CONDA_PREFIX}/bin/python3")
-set(Python3_INCLUDE_DIR "$ENV{CONDA_PREFIX}/include/python3.11")
-set(Python3_LIBRARY "$ENV{CONDA_PREFIX}/lib/libpython3.11.so")
+set(Python3_INCLUDE_DIR "$ENV{CONDA_PREFIX}/include/python3.12")
+set(Python3_LIBRARY "$ENV{CONDA_PREFIX}/lib/libpython3.12.so")
 
 find_package(Python3 REQUIRED COMPONENTS Interpreter Development NumPy)
 
