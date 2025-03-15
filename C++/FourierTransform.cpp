@@ -95,4 +95,5 @@ int main(){
     idft(fBin, N);
     cout << "Original Function: \n";
     origin(fBin, N);
+    return 0;
 }
