@@ -57,8 +57,8 @@ void trig(std::string req, Signal signal, Limit lim, Eigen::VectorXd& x, Eigen::
 
 int main() {    
     Eigen::VectorXd x, y;
-    Limit lim = {4*M_PI, -4*M_PI, 5, -5};
-    double xStep = M_PI;
+    Limit lim = {4, -4, 5, -5};
+    double xStep = 1;
     double yStep = 1;
     std::vector<double> yLim(2, 0);
     int xScaleCount = (int)((lim.xmax - lim.xmin)/xStep) + 1;
@@ -108,7 +108,7 @@ void calcGraph(std::vector<Signal> sig, Eigen::VectorXd& x, Eigen::VectorXd& y, 
     x = Eigen::VectorXd::LinSpaced(n, lim.xmin, lim.xmax);
     y = Eigen::VectorXd::Zero(n);
     for(int i = 0; i < sig.size(); i++){
-        y.array() += (sig[i].ampl*((x.array()*sig[i].freq+sig[i].phase).cos()));
+        y.array() += (sig[i].ampl*((x.array()*2*pi*sig[i].freq+sig[i].phase).cos()));
     }
     for(int i = 0; i < y.size(); i++){
         yLim[0] = y[i] > yLim[0]? y[i] : yLim[0];
@@ -183,7 +183,7 @@ void idft(cVector fBin){
 }
 
 std::vector<Signal> origin(cVector fBin){
-    int nyquist = N/2.0 > N/2? N/2 + 1: N/2;
+    int nyquist = N/2;
     std::vector<Signal> signal; 
     double freq, mag, phase;
     for(int i = 0; i < fBin.size(); i++){
