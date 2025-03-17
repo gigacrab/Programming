@@ -1,6 +1,7 @@
 #include "matplotlibcpp.h"
 #include <vector>
 #include <iostream>
+#include <fstream>
 #include <cmath>
 #include <complex>
 #include <string>
@@ -22,86 +23,94 @@ typedef struct {
 
 std::vector<double> toDoubleVector(const Eigen::VectorXd& x);
 std::vector<std::string> toStringVector(const Eigen::VectorXd& x);
-void dft(cVector vec, cVector& fBin);
-void idft(cVector fBin);
-std::vector<Signal> origin(cVector fBin);
-void dftInfo(cVector& vec);
+void dft(cVector& vec, bool invert);
+std::vector<Signal> originalFunc(cVector fBin);
+void getInfo(cVector& vec);
 void calcGraph(std::vector<Signal> sig, Eigen::VectorXd& x, Eigen::VectorXd& y, Limit lim, std::vector<double>& yLim);
+void fft(cVector& vec, bool invert);
 double roundDp(double n, int dp);
-void plotGraph(Limit lim, std::vector<double> xStd, std::vector<double> yStd, std::vector<double> yLim,
-    std::string title, std::vector<double> xTicks, std::vector<double> yTicks, 
-    std::vector<std::string> xLabels, std::vector<std::string> yLabels);
+std::vector<double> calcFreq(cVector vec, std::vector<double> yLim);
+void logResult(cVector vec);
+void plotGraph(Limit lim, std::vector<double> xStd, std::vector<double> yStd, std::vector<double> yLim, std::string title, bool line);
 
 namespace plt = matplotlibcpp;
 const double pi = M_PI;
 const int n = 5000;
-int N;
 
-void trig(std::string req, Signal signal, Limit lim, Eigen::VectorXd& x, Eigen::VectorXd& y){
-    x = Eigen::VectorXd::LinSpaced(5000, lim.xmin, lim.xmax); //size, low, high, :: is scope resolution operator
-    switch((char)toupper(req[0])){
-        case 'S':   
-            y = signal.ampl*((x.array()*signal.freq+signal.phase).sin());
-            break;
-        case 'C':
-            y = signal.ampl*((x.array()*signal.freq+signal.phase).cos());
-            break;
-        case 'T':
-            y = signal.ampl*((x.array()*signal.freq+signal.phase).tan()); 
-            break;
-        default:
-            std::cout << "Hey! Invalid choice. Defaulting to a sine graph.";
-            y = signal.ampl*((x.array()*signal.freq+signal.phase).sin());
-    }
-}
-
-int main() {    
+int main() {  
+    int N;  
     Eigen::VectorXd x, y;
     Limit lim = {4, -4, 5, -5};
-    double xStep = 1;
-    double yStep = 1;
+    std::string choice;
     std::vector<double> yLim(2, 0);
-    int xScaleCount = (int)((lim.xmax - lim.xmin)/xStep) + 1;
-    int yScaleCount = (int)((lim.ymax - lim.ymin)/yStep) + 1;
-    Eigen::VectorXd xTicksEigen = Eigen::VectorXd::LinSpaced((int)((lim.xmax-lim.xmin)/xStep), lim.xmin, lim.xmax);
-    Eigen::VectorXd yTicksEigen = Eigen::VectorXd::LinSpaced((int)((lim.ymax-lim.ymin)/yStep), lim.ymin, lim.ymax);
-    std::vector<double> xTicks = toDoubleVector(xTicksEigen), yTicks = toDoubleVector(yTicksEigen);
-    std::vector<std::string> xLabels = toStringVector(xTicksEigen), yLabels = toStringVector(yTicksEigen);
-    std::vector<Signal> sig;
 
-    std::cout << "Welcome to the *Ultimate* DFT Calculator!!!!!!!!!!!!!!!!\n";
-    std::cout << "Enter your number of samples: ";
-    std::cin >> N;
-    cVector vec(N);
-    cVector fBin(N);
-    dftInfo(vec);
-    std::cout << "\nUsing DFT: \n";
-    dft(vec, fBin);
-    std::cout << "Using IDFT: \n";
-    idft(fBin);
+    std::cout << "Welcome to the ULTIMATE FOURIER TRASNFORM CALCULATRO!!!\n";
+    cVector vec;
+    getInfo(vec);
+    std::cout << "DFT or FFT: ";
+    std::cin >> choice;
+    switch((char)toupper(choice[0])){
+        case 'D':
+            std::cout << "\nUsing DFT: \n";
+            dft(vec, false);
+            break;
+        case 'F':
+            std::cout << "\nUsing FFT: \n";
+            fft(vec, false);
+            break;
+        default:
+            std::cout << "Invalid choice!";
+            return 1;
+    }
+    logResult(vec);
+    std::cout << "Using Inverse: \n";
+    dft(vec, true);
+    logResult(vec);
     std::cout << "Original Function: \n";
-    sig = origin(fBin);
-    calcGraph(sig, x, y, lim, yLim);
+    calcGraph(originalFunc(vec), x, y, lim, yLim);
     std::vector<double> xStd = toDoubleVector(x);
     std::vector<double> yStd = toDoubleVector(y);
-    plotGraph(lim, xStd, yStd, yLim, "Ultimate Fourier Transform YEAHHHH", xTicks, yTicks, xLabels, yLabels);
+    //plotGraph(lim, xStd, yStd, yLim, "Function in the Time Domain", true);
+    Limit fLim;
+    std::vector<double> yFLim(2, 0);
+    std::vector<double> xFreq, yFreq = calcFreq(vec, yFLim);
+    Limit FLim;
+    /*FLim.xmax = xFreq[xFreq.size()-1];
+    FLim.xmin = xFreq[0];
+    FLim.ymax = 10; FLim.ymin = -10;
+    plotGraph(FLim, xFreq, yFreq, yFLim, "Function in Frequency Domain", false);*/
     return 0;
 }
 
-void plotGraph(Limit lim, std::vector<double> xStd, std::vector<double> yStd, std::vector<double> yLim,
-    std::string title, std::vector<double> xTicks, std::vector<double> yTicks, 
-    std::vector<std::string> xLabels, std::vector<std::string> yLabels){
+void plotGraph(Limit lim, std::vector<double> x, std::vector<double> y, std::vector<double> yLim, std::string title, bool line){
+    std::string sym = "";
+    if(line) sym = "-";
+    else sym = "o";
+    plt::figure();
     plt::plot({lim.xmax, lim.xmin}, {0, 0}, "k-");
     plt::plot({0, 0}, {yLim[0]*1.1, yLim[1]*1.1}, "k-");
-    plt::plot(xStd, yStd, "r-");
+    plt::plot(x, y, "r");
     plt::title(title);
     plt::xlim(lim.xmin, lim.xmax);
     plt::ylim(yLim[1]*1.1, yLim[0]*1.1);
-    //plt::xticks(xTicks, xLabels);
-    //plt::yticks(yTicks, yLabels);
     plt::axis("on");
     plt::grid(true);
     plt::show();
+}
+
+std::vector<double> calcFreq(cVector vec, std::vector<double> yLim){
+    fft(vec, false);
+    std::vector<double> x, y;
+    for(int i = 0; i < vec.size(); i++){
+        x.push_back(i);
+        y.push_back(abs(vec[i]));
+        if(y[i] > yLim[0]){
+            yLim[0] = y[i];
+        } else if(y[i] < yLim[1]){
+            yLim[1] = y[i];
+        }
+    }
+    return x, y;
 }
 
 void calcGraph(std::vector<Signal> sig, Eigen::VectorXd& x, Eigen::VectorXd& y, Limit lim, std::vector<double>& yLim){
@@ -116,19 +125,19 @@ void calcGraph(std::vector<Signal> sig, Eigen::VectorXd& x, Eigen::VectorXd& y, 
     }
 }
 
-void dftInfo(cVector& vec){
-    double reTemp;
-    double imTemp;
-    Complex cmplxTemp;
-
-    for(int i = 0; i < N; i++){
-        std::cout << "\nReal part of " << i+1 << "th sample: ";
-        std::cin >> reTemp;
-        std::cout << "Imaginary part of " << i+1 << "th sample: ";
-        std::cin >> imTemp;
-        cmplxTemp.real(reTemp);
-        cmplxTemp.imag(imTemp);
-        vec[i] = cmplxTemp;
+void getInfo(cVector& vec){
+    std::ifstream iFile;
+    std::string filename = "../data.csv", line = "", real = "", imag = "";
+    double dReal, dImag;
+    int location = 0;
+    iFile.open(filename);
+    while(std::getline(iFile, line)){
+        location = line.find(",");
+        real = line.substr(0, location);
+        imag = line.substr(location + 1, line.length());
+        dReal = stod(real);
+        dImag = stod(imag);
+        vec.push_back(Complex(dReal, dImag));
     }
 }
 
@@ -149,46 +158,58 @@ double roundDp(double n, int dp){
     return round(n * pow(10, dp)) / pow(10, dp);
 }
 
-void dft(cVector vec, cVector& fBin){
-    Complex sum;
-    double angle;
-    double phase;
-    for(int a = 0; a < N; a++){
-        sum = Complex(0, 0);
-        for(int i = 0; i < N; i++){
-            angle = -2*pi*a*i/N;
-            sum += vec[i]*Complex(cos(angle), sin(angle));
-        }
-        fBin[a] = sum;
-        phase = arg(sum);
-        sum.real(roundDp(sum.real(), 4));
-        sum.imag(roundDp(sum.imag(), 4));
-        std::cout << "X[" << a << "] = " << sum << ", Magnitude = " << abs(sum) << ", Argument = " << roundDp(phase, 4) << "\n";
+void logResult(cVector vec){
+    for(int i = 0; i < vec.size(); i++){
+        std::cout << "X[" << i << "] = " << vec[i] << "\n";
     }
 }
 
-void idft(cVector fBin){
-    Complex sum;
-    double angle;
-    for(int a = 0; a < N; a++){
-        sum = Complex(0, 0);
-        for(int i = 0; i < N; i++){
-            angle = 2*pi*a*i/N;
-            sum += fBin[i]*Complex(cos(angle)/N, sin(angle)/N);
-        }
-        sum.real(roundDp(sum.real(), 4));
-        sum.imag(roundDp(sum.imag(), 4));
-        std::cout << "X[" << a << "] = " << sum << "\n";
-    }
-}
-
-void fft(cVector vec, bool invert){
+void dft(cVector& vec, bool invert){
     int N = vec.size();
-    if(N == 1) return;
-    
+    Complex sum;
+    cVector temp = vec;
+    int x = invert? 1 : -1;
+    double y = invert? 1.0/N : 1;
+    for(int k = 0; k < N; k++){
+        sum = Complex(0, 0);
+        for(int i = 0; i < N; i++){
+            sum += temp[i]*Complex(cos(2*pi*k*i*x/N)*y, sin(2*pi*k*i*x/N)*y);
+        }
+        vec[k] = sum;
+    }
 }
 
-std::vector<Signal> origin(cVector fBin){
+void fft(cVector& vec, bool invert){
+    int size;
+    int N = vec.size();
+    if(N <= 1) return;
+
+    cVector even(N/2);
+    cVector odd(N/2);
+    for(int i = 0; i < N/2; i++){
+        even[i] = vec[i*2];
+        odd[i] = vec[i*2+1];
+    }
+
+    fft(even, invert);
+    fft(odd, invert);
+
+    Complex w;    
+    int x = invert? 1 : -1;
+    for(int k = 0; k < N/2; k++){
+        w = Complex(cos(2*pi*k*x/N), sin(2*pi*k*x/N));
+        vec[k] = even[k] + w*odd[k];
+        vec[k+N/2] = even[k] - w*odd[k];
+    }    
+    if (invert) {
+        for (int i = 0; i < N; i++) {
+            vec[i] /= N;
+        }
+    }
+}
+
+std::vector<Signal> originalFunc(cVector fBin){
+    int N = fBin.size();
     int nyquist = N/2;
     std::vector<Signal> signal; 
     double freq, mag, phase;
