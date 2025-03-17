@@ -182,6 +182,10 @@ void idft(cVector fBin){
     }
 }
 
+void fft(cVector vec){
+    
+}
+
 std::vector<Signal> origin(cVector fBin){
     int nyquist = N/2;
     std::vector<Signal> signal; 
