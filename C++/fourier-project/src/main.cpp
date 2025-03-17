@@ -29,7 +29,7 @@ void getInfo(cVector& vec);
 void calcGraph(std::vector<Signal> sig, Eigen::VectorXd& x, Eigen::VectorXd& y, Limit lim, std::vector<double>& yLim);
 void fft(cVector& vec, bool invert);
 double roundDp(double n, int dp);
-std::vector<double> calcFreq(cVector vec, std::vector<double> yLim);
+std::pair<std::vector<double>, std::vector<double>> calcFreq(cVector vec, std::vector<double>& yLim);
 void logResult(cVector vec);
 void plotGraph(Limit lim, std::vector<double> xStd, std::vector<double> yStd, std::vector<double> yLim, std::string title, bool line);
 
@@ -70,15 +70,15 @@ int main() {
     calcGraph(originalFunc(vec), x, y, lim, yLim);
     std::vector<double> xStd = toDoubleVector(x);
     std::vector<double> yStd = toDoubleVector(y);
-    //plotGraph(lim, xStd, yStd, yLim, "Function in the Time Domain", true);
+    plotGraph(lim, xStd, yStd, yLim, "Function in the Time Domain", true);
     Limit fLim;
     std::vector<double> yFLim(2, 0);
-    std::vector<double> xFreq, yFreq = calcFreq(vec, yFLim);
+    auto [xFreq, yFreq] = calcFreq(vec, yFLim);
     Limit FLim;
-    /*FLim.xmax = xFreq[xFreq.size()-1];
+    FLim.xmax = xFreq[xFreq.size()-1];
     FLim.xmin = xFreq[0];
     FLim.ymax = 10; FLim.ymin = -10;
-    plotGraph(FLim, xFreq, yFreq, yFLim, "Function in Frequency Domain", false);*/
+    plotGraph(FLim, xFreq, yFreq, yFLim, "Function in Frequency Domain", false);
     return 0;
 }
 
@@ -89,7 +89,7 @@ void plotGraph(Limit lim, std::vector<double> x, std::vector<double> y, std::vec
     plt::figure();
     plt::plot({lim.xmax, lim.xmin}, {0, 0}, "k-");
     plt::plot({0, 0}, {yLim[0]*1.1, yLim[1]*1.1}, "k-");
-    plt::plot(x, y, "r");
+    plt::plot(x, y, "r"+sym);
     plt::title(title);
     plt::xlim(lim.xmin, lim.xmax);
     plt::ylim(yLim[1]*1.1, yLim[0]*1.1);
@@ -98,7 +98,7 @@ void plotGraph(Limit lim, std::vector<double> x, std::vector<double> y, std::vec
     plt::show();
 }
 
-std::vector<double> calcFreq(cVector vec, std::vector<double> yLim){
+std::pair<std::vector<double>, std::vector<double>> calcFreq(cVector vec, std::vector<double>& yLim){
     fft(vec, false);
     std::vector<double> x, y;
     for(int i = 0; i < vec.size(); i++){
@@ -110,7 +110,7 @@ std::vector<double> calcFreq(cVector vec, std::vector<double> yLim){
             yLim[1] = y[i];
         }
     }
-    return x, y;
+    return {x, y};
 }
 
 void calcGraph(std::vector<Signal> sig, Eigen::VectorXd& x, Eigen::VectorXd& y, Limit lim, std::vector<double>& yLim){
