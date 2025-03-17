@@ -182,7 +182,9 @@ void idft(cVector fBin){
     }
 }
 
-void fft(cVector vec){
+void fft(cVector vec, bool invert){
+    int N = vec.size();
+    if(N == 1) return;
     
 }
 
