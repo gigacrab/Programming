@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include "TileMap.hpp"
 #include <iostream>
 #include <optional>
 
@@ -18,9 +19,6 @@ int main(){
     sf::CircleShape circle(50.f);
     circle.setTexture(&texture);
 
-    sf::VertexArray triangle(sf::PrimitiveType::Triangles, 3);
-    
-
     sf::Sprite sprite(texture);
 
     window.create(sf::VideoMode({800, 600}), "My Window");
@@ -35,9 +33,9 @@ int main(){
             text.setPosition({10.f, 10.f});
             circle.setPosition({400.f, 10.f});
             window.clear(sf::Color::Black);
-            window.draw(sprite);
+            /*window.draw(sprite);
             window.draw(text);
-            window.draw(circle);
+            window.draw(circle);*/
             window.display();
         }
     }
