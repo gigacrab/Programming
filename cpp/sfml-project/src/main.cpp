@@ -16,8 +16,10 @@ int main(){
     texture.setRepeated(true);
 
     sf::CircleShape circle(50.f);
-    circle.setTexture(&texture  );
+    circle.setTexture(&texture);
 
+    sf::VertexArray triangle(sf::PrimitiveType::Triangles, 3);
+    
 
     sf::Sprite sprite(texture);
 
