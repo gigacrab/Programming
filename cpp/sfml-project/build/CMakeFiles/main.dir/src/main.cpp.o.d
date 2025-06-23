@@ -1,5 +1,5 @@
 CMakeFiles/main.dir/src/main.cpp.o: \
- /home/littlecrabby/Programming/C++/sfml-project/src/main.cpp \
+ /home/littlecrabby/Programming/cpp/sfml-project/src/main.cpp \
  /usr/include/stdc-predef.h /usr/local/include/SFML/Graphics.hpp \
  /usr/local/include/SFML/Graphics/BlendMode.hpp \
  /usr/local/include/SFML/Graphics/Export.hpp \

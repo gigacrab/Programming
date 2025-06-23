@@ -1,4 +1,4 @@
-set(0, 'DefaultFigureRenderer', 'painters')
+%set(0, 'DefaultFigureRenderer', 'painters')
 x=0:pi/10:6*pi;
 y=x.*sin(x);
 plot(x,y,"rp--");
