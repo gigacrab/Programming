@@ -129,6 +129,30 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+src/TileMap.o: src/TileMap.cpp.o
+.PHONY : src/TileMap.o
+
+# target to build an object file
+src/TileMap.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TileMap.cpp.o
+.PHONY : src/TileMap.cpp.o
+
+src/TileMap.i: src/TileMap.cpp.i
+.PHONY : src/TileMap.i
+
+# target to preprocess a source file
+src/TileMap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TileMap.cpp.i
+.PHONY : src/TileMap.cpp.i
+
+src/TileMap.s: src/TileMap.cpp.s
+.PHONY : src/TileMap.s
+
+# target to generate assembly for a file
+src/TileMap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TileMap.cpp.s
+.PHONY : src/TileMap.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... src/TileMap.o"
+	@echo "... src/TileMap.i"
+	@echo "... src/TileMap.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

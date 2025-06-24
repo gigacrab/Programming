@@ -4,7 +4,7 @@
 #include <optional>
 
 int main(){
-    sf::RenderWindow window;
+    sf::RenderWindow window(sf::VideoMode({1920, 1080}), "My Window");
     
     sf::Font font("/home/littlecrabby/Programming/cpp/sfml-project/assets/fonts/Bit-23.ttf");
     sf::Text text(font);
@@ -21,7 +21,17 @@ int main(){
 
     sf::Sprite sprite(texture);
 
-    window.create(sf::VideoMode({800, 600}), "My Window");
+    constexpr std::array tiles = {
+        7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+        7, 0, 0, 0, 0, 0, 0, 0, 0, 7,
+        7, 0, 7, 7, 7, 7, 7, 7, 0, 7,
+        7, 0, 0, 0, 0, 0, 0, 0, 0, 7,
+        7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+    };
+
+    TileMap map;
+    if(!map.load("/home/littlecrabby/Programming/cpp/sfml-project/assets/images/tileset.png", {32, 32}, tiles.data(), 10, 5))
+        return -1;
 
     while(window.isOpen()){
         while(const std::optional event = window.pollEvent()){
@@ -36,6 +46,7 @@ int main(){
             /*window.draw(sprite);
             window.draw(text);
             window.draw(circle);*/
+            window.draw(map);
             window.display();
         }
     }

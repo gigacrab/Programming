@@ -1,6 +1,8 @@
-CMakeFiles/main.dir/src/main.cpp.o: \
- /home/littlecrabby/Programming/cpp/sfml-project/src/main.cpp \
- /usr/include/stdc-predef.h /usr/local/include/SFML/Graphics.hpp \
+CMakeFiles/main.dir/src/TileMap.cpp.o: \
+ /home/littlecrabby/Programming/cpp/sfml-project/src/TileMap.cpp \
+ /usr/include/stdc-predef.h \
+ /home/littlecrabby/Programming/cpp/sfml-project/src/TileMap.hpp \
+ /usr/local/include/SFML/Graphics.hpp \
  /usr/local/include/SFML/Graphics/BlendMode.hpp \
  /usr/local/include/SFML/Graphics/Export.hpp \
  /usr/local/include/SFML/Config.hpp \
@@ -265,6 +267,4 @@ CMakeFiles/main.dir/src/main.cpp.o: \
  /usr/local/include/SFML/System/FileInputStream.hpp \
  /usr/local/include/SFML/System/InputStream.hpp \
  /usr/local/include/SFML/System/MemoryInputStream.hpp \
- /usr/local/include/SFML/System/Sleep.hpp \
- /home/littlecrabby/Programming/cpp/sfml-project/src/TileMap.hpp \
- /usr/include/c++/11/iostream
+ /usr/local/include/SFML/System/Sleep.hpp
