@@ -1,7 +1,7 @@
 CMakeFiles/main.dir/src/TileMap.cpp.o: \
- /home/littlecrabby/Programming/cpp/sfml-project/src/TileMap.cpp \
+ /home/littlecrabby/Programming/cpp/sfml-tetris/src/TileMap.cpp \
  /usr/include/stdc-predef.h \
- /home/littlecrabby/Programming/cpp/sfml-project/src/TileMap.hpp \
+ /home/littlecrabby/Programming/cpp/sfml-tetris/src/TileMap.hpp \
  /usr/local/include/SFML/Graphics.hpp \
  /usr/local/include/SFML/Graphics/BlendMode.hpp \
  /usr/local/include/SFML/Graphics/Export.hpp \

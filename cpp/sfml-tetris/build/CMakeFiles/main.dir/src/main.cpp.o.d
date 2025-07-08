@@ -1,5 +1,5 @@
 CMakeFiles/main.dir/src/main.cpp.o: \
- /home/littlecrabby/Programming/cpp/sfml-project/src/main.cpp \
+ /home/littlecrabby/Programming/cpp/sfml-tetris/src/main.cpp \
  /usr/include/stdc-predef.h /usr/local/include/SFML/Graphics.hpp \
  /usr/local/include/SFML/Graphics/BlendMode.hpp \
  /usr/local/include/SFML/Graphics/Export.hpp \
@@ -266,7 +266,7 @@ CMakeFiles/main.dir/src/main.cpp.o: \
  /usr/local/include/SFML/System/InputStream.hpp \
  /usr/local/include/SFML/System/MemoryInputStream.hpp \
  /usr/local/include/SFML/System/Sleep.hpp \
- /home/littlecrabby/Programming/cpp/sfml-project/src/TileMap.hpp \
+ /home/littlecrabby/Programming/cpp/sfml-tetris/src/TileMap.hpp \
  /usr/include/c++/11/iostream /usr/include/c++/11/thread \
  /usr/include/c++/11/bits/std_thread.h \
  /usr/include/c++/11/bits/this_thread_sleep.h
